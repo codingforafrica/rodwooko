@@ -46,5 +46,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'simple_form'
 # Devise Authentication Bundle from Plataformatec
 gem 'devise'
+# Font Awesome Bundle
+gem "font-awesome-rails"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="jumbotron text-center">
+        <h1><i class="fa fa-leanpub"></i>RodWOOKO</h1>
+
+        <% if current_user %>
+            <p>Bienvenue sur la meuilleur Platforme de Gestion et de Vente de Livres en Ligne.</p>
+            <%= link_to "<i class='fa fa-pencil-square-o'></i> Nouvelle Tâches".html_safe, "#", class: "btn btn-success btn-lg btn-md btn-block" %>
+            <%= link_to "<i class='fa fa-list-ol'></i> Liste des Tâches".html_safe, "#", class: "btn btn-primary btn-lg btn-md btn-block" %>
+        <% else %>
+            <p>La Platforme de Gestion et de Vente de Livres en Ligne.</p>
+            <%= link_to "<i class='fa fa-pencil-square-o'></i> Sign up".html_safe, new_user_registration_path, class: "btn btn-success btn-lg btn-md btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
