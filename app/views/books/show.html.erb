@@ -13,5 +13,6 @@
     </div>
 </div>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to "<strong><i class='fa fa-hand-o-left'></i> Retour</strong>".html_safe, books_path %> |
+<%= link_to "<strong><i class='fa fa-pencil-square-o'></i> Modifier</strong>".html_safe, edit_book_path(@book) %> |
+<%= link_to "<strong><i class='fa fa-trash-o'></i> Supprimer</strong>".html_safe, book_path(@book), method: :delete, data: { confirm: "Etes-vous Sure?" } %>

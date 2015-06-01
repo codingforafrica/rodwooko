@@ -1,6 +1,6 @@
-<h1>Editing Book</h1>
+<h1 class="text-center"> Modifier Ouvrage </h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+  <%= link_to "<strong><i class='fa fa-hand-o-left'></i> Retour</strong>".html_safe, books_path %> |
+  <%= link_to "<strong><i class='fa fa-eye'></i> Preview</strong>".html_safe, @book %>
