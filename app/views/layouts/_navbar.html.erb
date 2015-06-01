@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-              <li><%= link_to "<i class='fa fa-file-text'></i> Nouvel Ouvrage".html_safe, "#" %></li>
+              <li><%= link_to "<i class='fa fa-book'></i> Nouvel Ouvrage".html_safe, new_book_path %></li>
               <li><%= link_to "<i class='fa fa-life-ring'></i> Support".html_safe, "#" %></li>
               <li><%= link_to "<i class='fa fa-cogs'></i> Configuration".html_safe, edit_user_registration_path %></li>
               <li><%= link_to "<i class='fa fa-sign-out'></i> Logout".html_safe, destroy_user_session_path, method: :delete %></li>
