@@ -1,19 +1,17 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
   <div class="row">
     <div class="col-md-5">
       <%= image_tag "hacentos.jpg", class: "img-responsive" %>
     </div>
     <div class="col-md-7">
       <h2 class="text-centered"><%= @book.name %></h2>
-      <h5>Auteur: <%= @book.author %></h5>
-      <p class="justify label-info">Description: <%= @book.description %></p>
+      <h5><strong>Auteur:</strong> <%= @book.author %></h5>
+      <p class="justify"><strong>Description:</strong> <%= @book.description %></p>
       <h4 class="text-centerd">Prix: $<%= @book.price.to_f / 100 %></h4>
     </div>
 
     </div>
 </div>
-
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
