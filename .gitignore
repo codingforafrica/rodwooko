@@ -15,4 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
-.idea
+# Ignore the IntelliJ-Idea
+/.idea
+# Ignore the environment file
+.env
+
