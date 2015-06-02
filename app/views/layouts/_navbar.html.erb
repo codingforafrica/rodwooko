@@ -15,12 +15,11 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
+              <li><%= link_to "<i class='fa fa-cubes'></i> Dashboard".html_safe, dashboard_path %></li>
               <li><%= link_to "<i class='fa fa-book'></i> Nouvel Ouvrage".html_safe, new_book_path %></li>
-              <li><%= link_to "<i class='fa fa-life-ring'></i> Support".html_safe, "#" %></li>
               <li><%= link_to "<i class='fa fa-cogs'></i> Configuration".html_safe, edit_user_registration_path %></li>
               <li><%= link_to "<i class='fa fa-sign-out'></i> Logout".html_safe, destroy_user_session_path, method: :delete %></li>
           <% else %>
-              <li><%= link_to "<i class='fa fa-life-ring'></i> Support".html_safe, "#" %></li>
               <li><%= link_to "<i class='fa fa-building'></i> About".html_safe, "#" %></li>
               <li><%= link_to "<i class='fa fa-key'></i> Login".html_safe, new_user_session_path %></li>
           <% end %>
