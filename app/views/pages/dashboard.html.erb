@@ -20,7 +20,7 @@
                   <td><%= link_to book.name, book_path(book) %></td>
                   <td><%= book.availability %></td>
                   <td>$<%= book.price.to_f / 100 %></td>
-                  <td><%= link_to "Editer", edit_book_path(book), class: "label label-info"%></td>
+                  <td><%= link_to " <i class='fa fa-pencil-square-o'></i> Editer".html_safe, edit_book_path(book), class: "label label-info"%></td>
                   </tr>
               <% end %>
               </tbody>
