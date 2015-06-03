@@ -31,10 +31,10 @@ class BooksController < ApplicationController
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Nouvel Ouvrage creé avec succès' }
-        format.json { render :show, status: :created, location: @book }
+        #format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+        #format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
   end
