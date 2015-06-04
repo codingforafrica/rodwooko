@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="jumbotron text-center">
+        <h1><i class="fa fa-leanpub"></i>RodWOOKO</h1>
+
+        <% if current_user %>
+            <div class="alert alert-info" role="alert"><strong>Votre payement à été validé. Le numéro de votre commande est: </strong><%= @sale.guid %></div>
+            <%= link_to "<i class='fa fa-download'></i> Téléchargez Ouvrage".html_safe, @book.resource.url, class: "btn btn-success btn-lg btn-md btn-block" %>
+        <% else %>
+            <p>La Platforme de Gestion et de Vente de Livres en Ligne.</p>
+            <%= link_to "<i class='fa fa-pencil-square-o'></i> Sign up".html_safe, new_user_registration_path, class: "btn btn-success btn-lg btn-md btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

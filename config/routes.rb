@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'pages#dashboard'
 
+  post '/payer/:slug', to: 'transactions#create', as: :payer
+  get '/pickup/:slug', to: 'transactions#pickup', as: :pickup
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

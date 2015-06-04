@@ -51,6 +51,7 @@ gem "font-awesome-rails"
 # Authorization Gem
 gem "cancan"
 # PaperClip Bundle
+# Do not forget to create the file in initializers/paperclip.rb
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Environment Variable for Dev Environment
 gem 'dotenv-rails', :groups => [:development, :test]
@@ -58,5 +59,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk', '< 2.0'
 # Friendly Url Support Bundle
 gem 'friendly_id', '~> 5.1.0'
+# Stripe payment processing
+# Do not forget to create the file in initializers/stripe.rb
+gem 'stripe'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
