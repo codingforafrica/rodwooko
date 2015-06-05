@@ -1,40 +1,21 @@
 <div class="container">
   <div class="row">
     <h3 class="text-center label-primary">Dashboard</h3>
+
     <div class="col-md-4">
       <h4 class="text-center"><strong>Mes Ouvrages </strong><%= link_to "Ajouter Ouvrage", new_book_path, class: "label label-success" %></h4>
-            <table class="table">
-              <thead>
-                  <tr>
-                    <th>Id</th>
-                    <th>Nom</th>
-                    <th>Disponible</th>
-                    <th>Prix</th>
-                    <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-              <% @books.each do |book| %>
-                  <tr>
-                  <td><%= book.id %></td>
-                  <td><%= link_to book.name, book_path(book) %></td>
-                  <td><%= book.availability %></td>
-                  <td>$<%= book.price.to_f / 100 %></td>
-                  <td><%= link_to " <i class='fa fa-pencil-square-o'></i> Editer".html_safe, edit_book_path(book), class: "label label-info"%></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
+      <%= render "ouvrages" %>
     </div>
 
     <div class="col-md-4">
       <h4 class="text-center"><strong>Mes Achats</strong></h4>
-
+      <%= render "achats" %>
     </div>
 
     <div class="col-md-4">
-      <h4 class="text-center"><strong>Mes Ventes</strong></h4>
-
+      <h4 class="text-center"><strong>Mes Ouvrages Vendus</strong></h4>
+      <%= render "ventes" %>
     </div>
+
   </div>
 </div>

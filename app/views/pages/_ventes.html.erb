@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Nom du Livre</th>
+    <th>Acheteur</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @sales.each do |sale| %>
+      <tr>
+        <td><%= time_ago_in_words(sale.created_at) %></td>
+        <td><%= link_to sale.book.name, book_path(sale.book.slug) %></td>
+        <td><%= sale.buyer_email %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

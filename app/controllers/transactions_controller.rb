@@ -13,7 +13,7 @@ class TransactionsController < ApplicationController
           description: current_user.email
       )
       # Proceed to the Sale
-      @sale = book.sales.create!(buyer_email: current_user.email)
+      @sale = book.sales.create!(buyer_email: current_user.email, seller_email: book.user.email)
       # Redirect user to the pickup url
       redirect_to pickup_url(guid: @sale.guid)
       # Rescue any error if it occurs

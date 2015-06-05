@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Nom du Livre</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @purchased.each do |sale| %>
+      <tr>
+        <td><%= time_ago_in_words(sale.created_at) %></td>
+        <td><%= link_to sale.book.name, book_path(sale.book.slug) %></td>
+        <td><%= link_to " <i class='fa fa-download'></i> Télécharger ".html_safe, pickup_url(sale.book.slug, guid: sale.guid), class: "label label-primary"%></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

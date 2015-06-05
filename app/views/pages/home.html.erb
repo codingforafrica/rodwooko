@@ -6,8 +6,8 @@
 
         <% if current_user %>
             <p>Bienvenue sur la meuilleur Platforme de Gestion et de Vente de Livres en Ligne.</p>
+            <%= link_to "<i class='fa fa-university'></i> Visiter Librairie".html_safe, books_path, class: "btn btn-primary btn-lg btn-md btn-block" %>
             <%= link_to "<i class='fa fa-book'></i> Nouvel Ouvrage".html_safe, new_book_path, class: "btn btn-success btn-lg btn-md btn-block" %>
-            <%= link_to "<i class='fa fa-university'></i> Ma Librairie".html_safe, books_path, class: "btn btn-primary btn-lg btn-md btn-block" %>
         <% else %>
             <p>La Platforme de Gestion et de Vente de Livres en Ligne.</p>
             <%= link_to "<i class='fa fa-pencil-square-o'></i> Sign up".html_safe, new_user_registration_path, class: "btn btn-success btn-lg btn-md btn-block" %>
